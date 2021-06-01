@@ -45,10 +45,10 @@ public class SmallestPositiveInteger {
     currentValueInSet = (Integer) value.next();
     nextValueInSet = (Integer) value.next();
     while (value.hasNext()) {
-      //Return 0 if any value is grater than 1,000,000 or less than -1,000,000
+      /**
+       * Return 0 if any value is grater than 1,000,000 or less than -1,000,000
+       * Return 1 if current value is negative and next value is positive */
       if (currentValueInSet > 1000000 || currentValueInSet < -1000000) return 0;
-
-      // Return 1 if current value is a negative and next value is a positive
       if (currentValueInSet <= 0 && nextValueInSet > 1) return 1;
 
       if (currentValueInSet + 1 < nextValueInSet && currentValueInSet > 0) {
